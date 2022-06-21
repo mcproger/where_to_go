@@ -1,0 +1,7 @@
+Django>3.1
+python-dotenv
+ipython
+gunicorn
+psycopg2
+django-extensions
+flake8
