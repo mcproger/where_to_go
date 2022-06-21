@@ -28,6 +28,8 @@ gunicorn==20.1.0
     # via -r requirements.in
 ipython==8.4.0
     # via -r requirements.in
+isort==5.10.1
+    # via -r requirements.in
 jedi==0.18.1
     # via ipython
 matplotlib-inline==0.1.3
