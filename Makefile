@@ -13,4 +13,4 @@ migrate:
 shell:
 	python src/manage.py shell
 lint:
-	flake8 src/
+	isort src/ && flake8 src/
