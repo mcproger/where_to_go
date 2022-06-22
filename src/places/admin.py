@@ -1,3 +1,7 @@
-from django.contrib import admin
+from app.admin import admin, ModelAdmin
+from places.models import Place
 
-# Register your models here.
+
+@admin.register(Place)
+class PlaceAdmin(ModelAdmin):
+    pass
