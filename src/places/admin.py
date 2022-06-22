@@ -1,4 +1,4 @@
-from app.admin import admin, ModelAdmin
+from app.admin import ModelAdmin, admin
 from places.models import Place
 
 
