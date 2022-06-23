@@ -1,10 +1,14 @@
+import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-xgwl%g0i-f)zu+lq@!o9((!hohm@c1anuys&(apad)_of3-rz3'
+SECRET_KEY = os.environ['SECRET_KEY']
 
-DEBUG = True
+DEBUG = bool(os.getenv('DEBUG', False))
 
 ALLOWED_HOSTS = []
 
@@ -81,8 +85,11 @@ USE_I18N = True
 
 USE_TZ = True
 
+MEDIA_URL = os.getenv('MEDIA_URL')
+MEDIA_ROOT = os.getenv('MEDIA_ROOT')
+
 # static section
-STATIC_URL = '/static/'
+STATIC_URL = os.getenv('STATIC_URL')
 STATICFILES_DIRS = [
     Path(BASE_DIR, 'static'),
 ]

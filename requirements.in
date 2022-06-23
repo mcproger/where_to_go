@@ -6,3 +6,4 @@ psycopg2
 django-extensions
 flake8
 isort
+Pillow
