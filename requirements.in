@@ -10,3 +10,4 @@ Pillow
 pytest
 factory-boy
 pytest-django
+djangorestframework

@@ -11,6 +11,8 @@ def place() -> Place:
     return PlaceFactory(
         title='Test place',
         slug='test_place_slug',
+        description_short='Short description',
+        description_long='Long description',
         latitude=Decimal(55),
         longitude=Decimal(37),
     )
