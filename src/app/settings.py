@@ -1,6 +1,6 @@
+import json
 import os
 from pathlib import Path
-import json
 
 from dotenv import load_dotenv
 

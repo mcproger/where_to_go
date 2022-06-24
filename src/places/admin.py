@@ -26,11 +26,6 @@ class PlaceImageInline(SortableStackedInline):
         )
 
 
-@admin.register(PlaceImage)
-class PlaceImageAdmin(ModelAdmin):
-    pass
-
-
 @admin.register(Place)
 class PlaceAdmin(SortableAdminBase, ModelAdmin):
     inlines = [
