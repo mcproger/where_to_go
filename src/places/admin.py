@@ -12,6 +12,7 @@ class PlaceImageInline(SortableStackedInline):
     extra = 3
     fields = [
         'title',
+        'image',
         'render_image',
         'order',
     ]
