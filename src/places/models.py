@@ -60,3 +60,7 @@ class PlaceImage(Model):
 
     def __str__(self) -> str:
         return f'{self.title} {self.order}'
+
+    @property
+    def image_url(self) -> str:
+        return self.image.url
