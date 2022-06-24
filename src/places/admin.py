@@ -1,6 +1,6 @@
+from adminsortable2.admin import SortableAdminBase, SortableStackedInline
 from django.http.request import HttpRequest
 from django.utils.safestring import mark_safe
-from adminsortable2.admin import SortableStackedInline, SortableAdminBase
 
 from app.admin import ModelAdmin, admin
 from app.models import models
