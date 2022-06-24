@@ -1,6 +1,7 @@
 from typing import Union
 
 from django.db import models
+from django.urls import reverse
 
 from places.models import Place
 
@@ -20,7 +21,7 @@ def _get_get_json_feature(place: Place) -> GeoJsonFeature:
         'properties': {
             'title': place.title,
             'placeId': place.slug,
-            'detailsUrl': f'./static/places/{place.slug}.json'
+            'detailsUrl': reverse('place-detail', kwargs={'place_id': place.pk})
         }
     }
 

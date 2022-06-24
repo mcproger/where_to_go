@@ -5,5 +5,5 @@ from places.api import views as api_views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('places/<int:place_id>/', api_views.PlaceView.as_view()),
+    path('places/<int:place_id>/', api_views.PlaceView.as_view(), name='place-detail'),
 ]

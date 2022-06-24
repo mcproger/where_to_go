@@ -8,8 +8,7 @@ from places.models import Place
 pytestmark = [pytest.mark.django_db]
 
 
-@pytest.mark.usefixtures('place')
-def test_get_geo_json() -> None:
+def test_get_geo_json(place: Place) -> None:
     assert get_geo_json(Place.objects.all()) == {
         'type': 'FeatureCollection',
         'features': [
@@ -25,7 +24,7 @@ def test_get_geo_json() -> None:
                 'properties': {
                     'title': 'Test place',
                     'placeId': 'test_place_slug',
-                    'detailsUrl': './static/places/test_place_slug.json',
+                    'detailsUrl': f'/places/{place.pk}/',
                 },
             },
         ],

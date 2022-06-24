@@ -15,4 +15,4 @@ shell:
 lint:
 	isort src/ && flake8 src/
 test:
-	pytest src/
+	pytest -svv src/
