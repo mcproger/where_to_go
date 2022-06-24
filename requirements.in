@@ -9,3 +9,4 @@ isort
 Pillow
 pytest
 factory-boy
+pytest-django

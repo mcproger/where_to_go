@@ -10,6 +10,8 @@ asgiref==3.5.2
     # via django
 asttokens==2.0.5
     # via stack-data
+attrs==21.4.0
+    # via pytest
 backcall==0.2.0
     # via ipython
 decorator==5.1.1
@@ -22,10 +24,16 @@ django-extensions==3.1.5
     # via -r requirements.in
 executing==0.8.3
     # via stack-data
+factory-boy==3.2.1
+    # via -r requirements.in
+faker==13.14.0
+    # via factory-boy
 flake8==4.0.1
     # via -r requirements.in
 gunicorn==20.1.0
     # via -r requirements.in
+iniconfig==1.1.1
+    # via pytest
 ipython==8.4.0
     # via -r requirements.in
 isort==5.10.1
@@ -36,6 +44,8 @@ matplotlib-inline==0.1.3
     # via ipython
 mccabe==0.6.1
     # via flake8
+packaging==21.3
+    # via pytest
 parso==0.8.3
     # via jedi
 pexpect==4.8.0
@@ -44,6 +54,8 @@ pickleshare==0.7.5
     # via ipython
 pillow==9.1.1
     # via -r requirements.in
+pluggy==1.0.0
+    # via pytest
 prompt-toolkit==3.0.29
     # via ipython
 psycopg2==2.9.3
@@ -52,20 +64,36 @@ ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
     # via stack-data
+py==1.11.0
+    # via pytest
 pycodestyle==2.8.0
     # via flake8
 pyflakes==2.4.0
     # via flake8
 pygments==2.12.0
     # via ipython
+pyparsing==3.0.9
+    # via packaging
+pytest==7.1.2
+    # via
+    #   -r requirements.in
+    #   pytest-django
+pytest-django==4.5.2
+    # via -r requirements.in
+python-dateutil==2.8.2
+    # via faker
 python-dotenv==0.20.0
     # via -r requirements.in
 six==1.16.0
-    # via asttokens
+    # via
+    #   asttokens
+    #   python-dateutil
 sqlparse==0.4.2
     # via django
 stack-data==0.3.0
     # via ipython
+tomli==2.0.1
+    # via pytest
 traitlets==5.3.0
     # via
     #   ipython
