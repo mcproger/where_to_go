@@ -28,6 +28,10 @@ class PlaceImageInline(SortableStackedInline):
 
 @admin.register(Place)
 class PlaceAdmin(SortableAdminBase, ModelAdmin):
+    search_fields = [
+        'title',
+        'slug',
+    ]
     inlines = [
         PlaceImageInline,
     ]
