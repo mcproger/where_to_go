@@ -36,4 +36,4 @@ def _get_geo_json(places: models.QuerySet) -> list[GeoJsonFeature]:
 def index(request: HttpRequest) -> HttpResponse:
     places = Place.objects.iterator()
     context = _get_geo_json(places)
-    return render(request, 'index.html', context={'context': context})
+    return render(request, 'places/index.html', context={'context': context})

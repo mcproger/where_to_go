@@ -89,10 +89,7 @@ USE_TZ = True
 MEDIA_URL = os.getenv('MEDIA_URL')
 MEDIA_ROOT = os.getenv('MEDIA_ROOT')
 
-# static section
 STATIC_URL = os.getenv('STATIC_URL')
-STATICFILES_DIRS = [
-    Path(BASE_DIR, 'static'),
-]
+STATIC_ROOT = os.getenv('STATIC_ROOT')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
