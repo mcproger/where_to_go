@@ -24,6 +24,7 @@ INSTALLED_APPS = [
 
     # third party apps
     'adminsortable2',
+    'tinymce',
     'rest_framework',
 
     # project apps

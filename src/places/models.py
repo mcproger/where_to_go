@@ -1,4 +1,5 @@
 from django.utils.translation import gettext_lazy as _
+from tinymce.models import HTMLField
 
 from app.models import Model, models
 
@@ -7,7 +8,7 @@ class Place(Model):
     title = models.CharField(_('Title'), max_length=32, db_index=True)
     slug = models.SlugField(_('Slug for the place'), max_length=32, db_index=True, default='')
     description_short = models.CharField(_('Short description of the place'), max_length=250, blank=True, null=True)
-    description_long = models.TextField(_('Detailed description of the place'), blank=True, null=True)
+    description_long = HTMLField(_('Detailed description of the place'), blank=True, null=True)
     # here is better to use PointField, but we are limited with a sqlite database for now
     latitude = models.DecimalField(
         _('Latitude of the place\'s location'),

@@ -12,3 +12,4 @@ factory-boy
 pytest-django
 djangorestframework
 django-admin-sortable2
+django-tinymce
