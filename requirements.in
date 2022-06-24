@@ -7,3 +7,5 @@ django-extensions
 flake8
 isort
 Pillow
+pytest
+factory-boy
