@@ -16,3 +16,5 @@ lint:
 	isort src/ && flake8 src/
 test:
 	pytest -svv src/
+check-deploy:
+	python manage.py check --deploy

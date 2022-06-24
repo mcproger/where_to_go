@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import json
 
 from dotenv import load_dotenv
 
@@ -11,7 +12,10 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 DEBUG = bool(os.getenv('DEBUG', False))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = json.loads(os.getenv('ALLOWED_HOSTS', '[]'))
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 INSTALLED_APPS = [
     # predefined apps
@@ -62,10 +66,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': os.getenv(
+        'DATABASE_URL',
+        {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        },
+    )
 }
 
 AUTH_PASSWORD_VALIDATORS = [
