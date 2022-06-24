@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # third party apps
+    'adminsortable2',
     'rest_framework',
 
     # project apps

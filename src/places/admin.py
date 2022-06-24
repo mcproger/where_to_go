@@ -1,12 +1,13 @@
 from django.http.request import HttpRequest
 from django.utils.safestring import mark_safe
+from adminsortable2.admin import SortableStackedInline, SortableAdminBase
 
 from app.admin import ModelAdmin, admin
 from app.models import models
 from places.models import Place, PlaceImage
 
 
-class PlaceImageInline(admin.TabularInline):
+class PlaceImageInline(SortableStackedInline):
     model = PlaceImage
     extra = 3
     fields = [
@@ -30,7 +31,7 @@ class PlaceImageAdmin(ModelAdmin):
 
 
 @admin.register(Place)
-class PlaceAdmin(ModelAdmin):
+class PlaceAdmin(SortableAdminBase, ModelAdmin):
     inlines = [
         PlaceImageInline,
     ]

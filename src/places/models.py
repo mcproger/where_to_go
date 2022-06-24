@@ -57,6 +57,7 @@ class PlaceImage(Model):
     class Meta:
         verbose_name = _('Place image')
         verbose_name_plural = _('Place images')
+        ordering = ['order']
 
     def __str__(self) -> str:
         return f'{self.title} {self.order}'
